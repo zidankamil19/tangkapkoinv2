@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NEON DASH - Coin Hunter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head><body><!-- BACKGROUND --><div class="background"></div><!-- ================= MENU ================= --><div id="menuScreen" class="screen active"><div class="logo">
+    <h1>NEON<span>DASH</span></h1>
+    <p>⚡ COIN HUNTER ⚡</p>
+</div>
+
+<div class="menu-card">
+
+    <h2>SIAP BERMAIN?</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="👤 Masukkan Username"
+        maxlength="15"
+    >
+
+    <input
+        type="tel"
+        id="phone"
+        placeholder="📱 Nomor WhatsApp"
+    >
+
+    <button class="main-btn" onclick="startGame()">
+        🎮 MULAI BERMAIN
+    </button>
+
+    <button class="secondary-btn" onclick="openLeaderboard()">
+        🏆 LEADERBOARD
+    </button>
+
+    <div class="how-to">
+        <h3>🎯 CARA BERMAIN</h3>
+        <p>💰 Koin = +10</p>
+        <p>💎 Diamond = +50</p>
+        <p>💣 Bom = -1 Nyawa</p>
+        <p>🔥 Combo meningkatkan skor!</p>
+    </div>
+
+</div>
+
+</div><!-- ================= GAME ================= --><div id="gameScreen" class="screen"><div class="game-container">
+
+    <!-- HUD -->
+
+    <div class="hud">
+
+        <div class="hud-box">
+            <span>👤</span>
+            <span id="playerName">Player</span>
+        </div>
+
+        <div class="hud-box">
+            ⭐ <span id="score">0</span>
+        </div>
+
+        <div class="hud-box">
+            ❤️ <span id="lives">3</span>
+        </div>
+
+        <div class="hud-box">
+            ⏱️ <span id="timer">60</span>
+        </div>
+
+    </div>
+
+
+    <!-- LEVEL -->
+
+    <div class="level-info">
+        LEVEL <span id="level">1</span>
+        <br>
+        🔥 COMBO x<span id="combo">1</span>
+    </div>
+
+
+    <!-- GAME AREA -->
+
+    <div id="gameArea">
+
+        <div id="player">
+            🤖
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE CONTROL -->
+
+    <div class="mobile-controls">
+
+        <button id="leftBtn">⬅</button>
+
+        <button id="rightBtn">➡</button>
+
+    </div>
+
+</div>
+
+</div><!-- ================= GAME OVER ================= --><div id="gameOverScreen" class="screen"><div class="result-card">
+
+    <div class="gameover-icon">💀</div>
+
+    <h1>GAME OVER</h1>
+
+    <p>PLAYER</p>
+    <h2 id="resultName">Player</h2>
+
+    <div class="final-score">
+
+        <p>FINAL SCORE</p>
+
+        <h1 id="finalScore">0</h1>
+
+    </div>
+
+    <div class="result-info">
+
+        <div>
+            <span>LEVEL</span>
+            <strong id="finalLevel">1</strong>
+        </div>
+
+        <div>
+            <span>COMBO TERBAIK</span>
+            <strong id="bestCombo">1</strong>
+        </div>
+
+    </div>
+
+    <button class="main-btn" onclick="restartGame()">
+        🔄 MAIN LAGI
+    </button>
+
+    <button class="secondary-btn" onclick="backMenu()">
+        🏠 MENU UTAMA
+    </button>
+
+</div>
+
+</div><!-- ================= LEADERBOARD ================= --><div id="leaderboardScreen" class="screen"><div class="leaderboard-card">
+
+    <h1>🏆 LEADERBOARD</h1>
+
+    <p class="subtitle">
+        TOP 10 NEON DASH PLAYER
+    </p>
+
+    <div id="leaderboardList">
+
+        <!-- DATA PLAYER -->
+
+    </div>
+
+    <button class="secondary-btn" onclick="backMenu()">
+        ⬅ KEMBALI
+    </button>
+
+</div>
+
+</div><script src="script.js"></script></body>
+</html>
